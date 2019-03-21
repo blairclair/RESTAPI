@@ -15,3 +15,9 @@ The requirements for compiling the api which are also listed in the requirements
 - flask-sqlalchemy
 - flask-marshmallow
 - marshmallow-sqlalchemy
+
+
+Getting Started
+---------------
+---------------
+**using a virtual environment**
