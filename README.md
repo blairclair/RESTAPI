@@ -81,3 +81,4 @@ curl -XPUT -H "Content-type: application/json" -d '{
 ```
 curl -XGET 'http://localhost:5000/infofrompartygoer/1'
 ```
+![](setup.gif)
