@@ -29,3 +29,7 @@ Getting Started
 You should see a new file named ***db.sqlite*** in your directory. This holds your database information.
 - Exit the python shell with *exit()*
 - Start the application with *python app.py*
+
+Querying the API
+---------------
+-------------
