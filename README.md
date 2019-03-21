@@ -69,7 +69,7 @@ curl -XPOST -H "Content-type: application/json" -d '{
 ```
 curl -XGET 'http://localhost:5000/partygoerinfo'
 ```
-- To edit a Partygoerinfo (replace 1 with the id of the partygoerinfo you wish to edit):
+- To edit a Partygoerinfo (replace 1 with the partygoerinfo id you wish to edit):
 ```
 curl -XPUT -H "Content-type: application/json" -d '{
 "email": "newEmail",
@@ -77,4 +77,7 @@ curl -XPUT -H "Content-type: application/json" -d '{
 "position": "newPosition"
 }' 'http://localhost:5000/partygoerinfo/1'
 ```
-- To get a Partygoerinfo from a Partygoer id
+- To get a Partygoerinfo from a Partygoer id (replace 1 with the partygoer id you wish to get the info of):
+```
+curl -XGET 'http://localhost:5000/infofrompartygoer/1'
+```
