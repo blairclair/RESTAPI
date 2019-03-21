@@ -81,5 +81,6 @@ curl -XPUT -H "Content-type: application/json" -d '{
 ```
 curl -XGET 'http://localhost:5000/infofrompartygoer/1'
 ```
-Gif showing how to setup the database and server
+***Gif showing how to setup the database and server***
+
 ![](setup.gif)
