@@ -95,7 +95,9 @@ def update_partygoer(id):
 @app.route('/partygoer/<id>', methods=['DELETE'])
 def delete_partygoer(id):
 	partygoer = Partygoer.query.get(id)
+	partygoerinfo = Partygoerinfo.query.get(id)
 	db.session.delete(partygoer)
+	db.session.delete(partygoerinfo)
 	db.session.commit()
 	return partygoer_schema.jsonify(partygoer)
 
@@ -140,14 +142,6 @@ def update_partygoerinfo(id):
 
 	db.session.commit()
 
-	return partygoerinfo_schema.jsonify(partygoerinfo)
-
-#Deletes a Partygoerinfo
-@app.route('/partygoerinfo/<id>', methods=['DELETE'])
-def delete_partygoerinfo(id):
-	partygoerinfo = Partygoerinfo.query.get(id)
-	db.session.delete(partygoerinfo)
-	db.session.commit()
 	return partygoerinfo_schema.jsonify(partygoerinfo)
 
 #Given the id of a Partygoer gets their info
