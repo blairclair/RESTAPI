@@ -42,32 +42,39 @@ curl -XPOST -H "Content-type: application/json" -d '{
 }' 'http://localhost:5000/partygoer'
 ```
 - To get a list of all the Partygoers:
->curl -XGET 'http://localhost:5000/partygoer'
+```
+curl -XGET 'http://localhost:5000/partygoer'
+```
 
 - To edit a Partygoer's data (replace 1 with the id of the partygoer you wish to edit):
->curl -XPUT -H "Content-type: application/json" -d '{
->"password": "New password",
->"creationdate": "March 21, 2019"
->}' 'http://localhost:5000/partygoer/1'
-
+```
+curl -XPUT -H "Content-type: application/json" -d '{
+"password": "New password",
+"creationdate": "March 21, 2019"
+}' 'http://localhost:5000/partygoer/1'
+```
 - To delete a Partygoer and it's info (replace 1 with the id of the partygoer you wish to delete):
->curl -XDELETE 'http://localhost:5000/partygoer/1'
-
+```
+curl -XDELETE 'http://localhost:5000/partygoer/1'
+```
 - To add a Partygoerinfo
->curl -XPOST -H "Content-type: application/json" -d '{
->"email": "myemail@gmail.com",
->"company": "mycompany",
->"position": "myposition"
->}' 'http://localhost:5000/partygoerinfo'
-
+```
+curl -XPOST -H "Content-type: application/json" -d '{
+"email": "myemail@gmail.com",
+"company": "mycompany",
+"position": "myposition"
+}' 'http://localhost:5000/partygoerinfo'
+```
 - To get a list of all Partygoerinfo:
->curl -XGET 'http://localhost:5000/partygoerinfo'
-
+```
+curl -XGET 'http://localhost:5000/partygoerinfo'
+```
 - To edit a Partygoerinfo (replace 1 with the id of the partygoerinfo you wish to edit):
->curl -XPUT -H "Content-type: application/json" -d '{
->"email": "newEmail",
->"company": "newCompany",
->"position": "newPosition"
->}' 'http://localhost:5000/partygoerinfo/1'
-
+```
+curl -XPUT -H "Content-type: application/json" -d '{
+"email": "newEmail",
+"company": "newCompany",
+"position": "newPosition"
+}' 'http://localhost:5000/partygoerinfo/1'
+```
 - To get a Partygoerinfo from a Partygoer id
