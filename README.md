@@ -24,7 +24,7 @@ Getting Started
 
 - Start your virtual environment by running the command ```pipenv shell```
 - Then install the required dependencies by running ```pip3 install -r requirements.txt```
-- Make your way into the python shell by running ```python```
+- Make your way into the python shell by running ```python3```
 - From the python shell run ```from app import db``` and then ```db.create_all()```. This creates your database based on the classes.
 You should see a new file named ***db.sqlite*** in your directory. This holds your database information.
 - Exit the python shell with ```exit()```
