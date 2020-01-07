@@ -29,8 +29,8 @@ class   PartygoerSchema(ma.Schema):
 	class Meta:
 		fields = ('id', 'password', 'creationdate')
 
-partygoer_schema = PartygoerSchema(strict=True)
-partygoers_schema = PartygoerSchema(many=True, strict=True)
+partygoer_schema = PartygoerSchema()
+partygoers_schema = PartygoerSchema(many=True)
 
 #defines and initializes the Partygoerinfo class
 class   Partygoerinfo(db.Model):
@@ -48,8 +48,8 @@ class   PartygoerinfoSchema(ma.Schema):
 	class Meta:
 		fields = ('id', 'email', 'company', 'position')
 
-partygoerinfo_schema = PartygoerinfoSchema(strict=True)
-partygoerinfos_schema = PartygoerinfoSchema(many=True, strict=True)
+partygoerinfo_schema = PartygoerinfoSchema()
+partygoerinfos_schema = PartygoerinfoSchema(many=True)
 
 #Adds a new Partygoer
 @app.route('/partygoer', methods=['POST'])
@@ -68,7 +68,7 @@ def add_partygoer():
 def get_partygoers():
 	all_partygoers = Partygoer.query.all()
 	result = partygoers_schema.dump(all_partygoers)
-	return jsonify(result.data)
+	return jsonify(result)
 
 #Gets a single Partygoer
 @app.route('/partygoer/<id>', methods=['GET'])
@@ -119,7 +119,7 @@ def	add_partygoerinfo():
 def get_partygoerinfos():
 	all_partygoerinfos = Partygoerinfo.query.all()
 	result = partygoerinfos_schema.dump(all_partygoerinfos)
-	return jsonify(result.data)
+	return jsonify(result)
 
 #Gets a single Partygoerinfo
 @app.route('/partygoerinfo/<id>', methods=['GET'])
