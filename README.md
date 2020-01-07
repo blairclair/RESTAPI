@@ -28,7 +28,7 @@ Getting Started
 - From the python shell run ```from app import db``` and then ```db.create_all()```. This creates your database based on the classes.
 You should see a new file named ***db.sqlite*** in your directory. This holds your database information.
 - Exit the python shell with ```exit()```
-- Start the application with ```python app.py```
+- Start the application with ```python3 app.py```
 
 Querying the API
 ---------------
@@ -81,6 +81,3 @@ curl -XPUT -H "Content-type: application/json" -d '{
 ```
 curl -XGET 'http://localhost:5000/infofrompartygoer/1'
 ```
-***Gif showing how to setup the database and server***
-
-![](setup.gif)
